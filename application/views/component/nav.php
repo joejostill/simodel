@@ -51,14 +51,20 @@
                                 <div class="input-group mb-3">
                                     <select class="form-select" name="jenis" required aria-label="Default select example">
                                         <option selected>Menu</option>
-                                        <option value="1">One</option>
-                                        <option value="2">Two</option>
-                                        <option value="3">Three</option>
+                                        <option value="Food">Food</option>
+                                        <option value="Drink">Drink</option>
+                                        <option value="Snack">Snack</option>
+                                        <option value="Ice Cream">Ice Cream</option>
+                                        <option value="Cookies">Cookies</option>
                                     </select>
                                 </div>
                                 <h5>Stok : </h5>
                                 <div class="input-group mb-3">
                                     <input type="number" name="stok" required  class="form-control" placeholder="Masukkan Stok" >
+                                </div>
+                                <h5>Harga : </h5>
+                                <div class="input-group mb-3">
+                                    <input type="number" name="harga" required  class="form-control" placeholder="Masukkan Stok" >
                                 </div>
                             </div>
                             <div class="modal-footer">

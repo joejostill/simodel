@@ -23,20 +23,16 @@ class Pages extends CI_Controller
 
 	public function store()
 	{
+		$this->load->helper('file');
 		$time = time();
-		$config['upload_path']          = "/image/menu/";
-		$config['allowed_types']        = 'gif|jpg|png';
-		$config['file_name']        	= $_POST['id_menu'].$time;
-		$config['max_size']             = 2048000;
-		$config['max_width']            = 1024;
-		$config['max_height']           = 768;
+		$file   = read_file($_FILES['foto']['tmp_name']);
+		$name   = $time.basename($_FILES['foto']['name']);
 
-		$hasil = $this->load->library('upload', $config);
-
-		if (!$this->upload->do_upload('foto')) {
+		if (!write_file('./image/menu/'.$name, $file)) {
 			echo $this->upload->display_errors();
 		} else {
-			$this->db->query("insert into menu values('".$_POST['id_menu']."','".$_POST['jenis']."','".$_POST['nama']."','".$_POST['harga']."','".$config['file_name'] ."','".$_POST['stock']."')");
+			$this->db->query("insert into menu values('" . $_POST['id_menu'] . "','" . $_POST['jenis'] . "','" . $_POST['nama'] . "','" . $_POST['harga'] . "','" . $name . "','" . $_POST['stok'] . "')");
+			redirect("/pages");
 		}
 	}
 }
