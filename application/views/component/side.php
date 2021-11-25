@@ -111,7 +111,7 @@
   }
 
   .bg-blue {
-    background: rgb(94, 171, 193);
+    background: rgb(116, 183, 202);
   }
 </style>
 <script>
@@ -125,12 +125,12 @@
   })()
 </script>
 <div class="bg-blue col-12" style="min-height: 800px;">
-  <a href="/" class="d-flex align-items-center link-light text-decoration-none">
+  <a href="./" class="d-flex align-items-center link-light text-decoration-none">
     <img src="<?php echo base_url("/image/logo.png"); ?>" class="col-12 mt-3" alt="" srcset="">
   </a>
   <ul class="nav nav-pills flex-column mb-auto mt-5">
     <li class="nav-item">
-      <a href="#" class="nav-link btn-menu py-3" aria-current="page">
+      <a href="<?php echo base_url(); ?>index.php/Pages" class="nav-link btn-menu py-3" aria-current="page">
         <span class="material-icons-outlined offset-1" style="font-size:15px;font-weight:100">
           dashboard
         </span>
@@ -140,7 +140,7 @@
       </a>
     </li>
     <li class="nav-item">
-      <a href="#" class="nav-link btn-menu py-3" aria-current="page">
+      <a href="<?php echo base_url(); ?>index.php/Pages/transaksi" class="nav-link btn-menu py-3" aria-current="page">
         <span class="material-icons-outlined offset-1" style="font-size:15px;font-weight:100">
           compare_arrows 
         </span>
@@ -150,7 +150,7 @@
       </a>
     </li>
     <li class="nav-item">
-      <a href="#" class="nav-link btn-menu py-3" aria-current="page">
+      <a href="<?php echo base_url(); ?>index.php/Pages/report" class="nav-link btn-menu py-3" aria-current="page">
         <span class="material-icons-outlined offset-1" style="font-size:15px;font-weight:100">
           assignment
         </span>
@@ -160,7 +160,7 @@
       </a>
     </li>
     <li class="nav-item">
-      <a href="#" class="nav-link btn-menu py-3" aria-current="page">
+      <a href="<?php echo base_url('./index.php/pages/logout'); ?>" class="nav-link btn-menu py-3" aria-current="page">
         <span class="material-icons-outlined offset-1" style="font-size:15px;font-weight:100">
           logout
         </span>
